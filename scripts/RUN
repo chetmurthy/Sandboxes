@@ -1,0 +1,194 @@
+#!/usr/bin/perl -w
+
+use strict ;
+use Carp;
+use Carp::Assert;
+use YAML::Tiny;
+use Data::Dumper ;
+
+our $verbose ;
+our $chdir ;
+our $rc ;
+our @sandboxes = () ;
+
+while(@ARGV) {
+  if ($ARGV[0] eq '-rcfile') {
+    shift @ARGV ;
+    my $rcfile = shift @ARGV ;
+    $rc = YAML::Tiny->read($rcfile)
+    || confess "cannot read rcfile $rcfile" ;
+    $rc = $rc->[0] || confess "malformed YAML: ".Dumper($rc) ;
+  }
+  elsif ($ARGV[0] eq '-v') {
+    shift @ARGV ; $verbose = 1 ;
+  }
+  elsif ($ARGV[0] eq '-C') {
+    shift @ARGV; $chdir = shift @ARGV;
+  }
+  elsif ($ARGV[0] eq '-s') {
+    shift @ARGV;
+    my $t = shift @ARGV;
+    push(@sandboxes, split(/\s*,\s*/, $t)) ;
+  }
+  else { last ; }
+}
+
+unless ($rc) {
+  $rc = YAML::Tiny->read("$ENV{HOME}/.sandbox/rc.yaml")
+    || confess "cannot read rcfile $ENV{HOME}/.sandbox/rc.yaml";
+  $rc = $rc->[0] || confess "malformed YAML: ".Dumper($rc) ;
+}
+
+foreach my $s (@sandboxes) {
+  dosandbox($s) ;
+}
+
+our $prog = shift @ARGV;
+
+our $args = @ARGV ? (" '".join("' '",@ARGV)."'") : "";
+our $cmd = "$prog$args";
+chdir($chdir) if (defined $chdir);
+print STDERR $cmd."\n" if $main::verbose ;
+exec $cmd;
+
+sub dosandbox {
+  my $s = shift;
+
+  if (exists $rc->{'composite'}->{$s}) {
+    my @sl = @{ $rc->{'composite'}->{$s} } ;
+    foreach my $subs (@sl) {
+      dosandbox($subs) ;
+    }
+  }
+  elsif (exists $rc->{'sandboxes'}->{$s}) {
+    my $sbh = $rc->{'sandboxes'}->{$s} ;
+    my $dir = envsubst($sbh->{'directory'}) ;
+    my $rc = $sbh->{'rc'} ;
+    my $varname = $sbh->{'varname'} ;
+
+    $ENV{$varname} = $dir ;
+    
+    my @rcfiles ;
+    if (ref($rc) eq 'ARRAY') {
+      @rcfiles = @{ $rc } ;
+    }
+    else {
+      push(@rcfiles, $rc) ;
+    }
+    foreach my $f (@rcfiles) {
+      my $absf = selectrc(envsubst($f)) ;
+      dorc($dir, $absf) ;
+    }
+    sbpush($s) ;
+  }
+  else { confess "unknown sandbox $s" ; }
+}
+
+sub dorc {
+  my $sbdir = shift ;
+  my $rcfile = shift ;
+
+  my $wd = `pwd` ;
+  chomp $wd ;
+
+  chdir($sbdir) || confess "cannot chdir to sandboxdir <<$sbdir>>" ;
+
+  bashdot(". $rcfile");
+  chdir($wd) ;
+}
+
+sub envsubst {
+  my $txt = shift ;
+
+  my $result = "" ;
+  while ($txt =~ s,(\$[a-z][a-z0-9]*|\${[a-z][a-z0-9]*}),,si) {
+    $result .= $` . env($1) ;
+    $txt = $' ;
+  }
+  $result .= $txt ;
+
+  return $result ;
+}
+
+sub env {
+  my $x = shift ;
+  my $varna ;
+  if ($x =~ m,\$([a-z][a-z0-9]*),i) {
+    $varna = $1 ;
+  }
+  elsif ($x =~ m,\${([a-z][a-z0-9]*)},i) {
+    $varna = $1 ;
+  }
+  else { confess "agh!  bad env var <<$x>>" ; }
+
+  if (exists $ENV{$varna}) {
+    return $ENV{$varna} ;
+  }
+  else { return "" ; }
+}
+
+sub bashdot {
+  my $txt = join("\n",@_)."\n" ;
+
+  open(DOT,">/tmp/tmp$$") || confess "basndot: cannot open open /tmp/tmp$$ for write" ;
+  print DOT $txt ;
+  print DOT "echo \"--RoNnIeRaYgUn--\"\n" ;
+  print DOT "printenv\n";
+  close(DOT) ;
+
+  open(BASH,"bash /tmp/tmp$$ |") || confess "cannot run bash script /tmp/tmp$$" ;
+  while(<BASH>) {
+    last if /--RoNnIeRaYgUn--/ ;
+    print ;
+  }
+  my %h = () ;
+  while(<BASH>) {
+    next unless /\S/ ;
+    confess "bad printenv line <<$_>>"
+      unless (/^([^=\s]+)=(.*)$/) ;
+
+    my $lhs = $1 ;
+    my $rhs = $2 ;
+
+    next if $lhs eq '_' ;
+    next if $lhs eq 'SHLVL' ;
+
+    if (!(exists $ENV{$lhs}) || $rhs ne $ENV{$lhs}) {
+      $h{$lhs} = $rhs ;
+    }
+  }
+  print Dumper(\%h) if $main::verbose ;
+
+  foreach my $k (sort (keys %h)) {
+    print STDERR "export $k=$h{$k}\n" if $main::verbose ;
+    $ENV{$k} = $h{$k} ;
+  }
+}
+
+sub v_system {
+  my $cmd = shift;
+  print STDERR "<<$cmd>>\n" if ($main::verbose);
+  system $cmd;
+}
+
+sub selectrc {
+  my $f = shift ;
+
+  my $h = `hostname` ;
+  chomp $h ;
+
+  return "$f.$h" if (-r "$f.$h") ;
+  return $f if (-r $f) ;
+  confess "no rcfile $f" ;
+}
+
+sub sbpush {
+  my $tok = shift ;
+
+  if (exists $ENV{SANDBOX}) {
+    $ENV{SANDBOX} =~ s/\[(.+)\]/ "[$1:$tok]" /e ;
+  }
+  else {
+    $ENV{SANDBOX} = "[$tok]" ;
+  }
+}
