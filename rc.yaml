@@ -1,0 +1,27 @@
+---
+composite:
+  ZK:
+    - Caml4.00
+    - Thrift-ZK
+  ZK.DEBUG:
+    - Caml4.00.DEBUG
+    - Thrift-ZK
+sandboxes:
+  Caml4.00:
+    directory: '$HOME/Hack/Caml4.00'
+    rc: '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
+    varname: CAMLROOT
+  Caml4.00.DEBUG:
+    directory: '$HOME/Hack/Caml4.00.DEBUG'
+    rc: '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
+    varname: CAMLROOT
+  Thrift-ZK:
+    directory: '$HOME/Hack.IBM/Thrift-ZK'
+    rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
+    varname: THRIFTROOT
+  Thrift-ZK.TEST:
+    directory: '$HOME/Hack.IBM/Thrift-ZK'
+    rc:
+      - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc.0'
+      - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
+    varname: THRIFTROOT
