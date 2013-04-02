@@ -11,10 +11,17 @@ sandboxes:
     directory: '$HOME/Hack/Caml4.00'
     rc: '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
+    description: "Ocaml 4.00.1 installation (Unmodified)"
   Caml4.00.DEBUG:
     directory: '$HOME/Hack/Caml4.00.DEBUG'
     rc: '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
+    description: "Ocaml 4.00.1 installation (modified with big-file patch)"
+  Caml4.00.TEST:
+    directory: '$HOME/Hack/Caml4.00.TEST'
+    rc: '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.00.1 installation (for testing)"
   Thrift-ZK:
     directory: '$HOME/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'

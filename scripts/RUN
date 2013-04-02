@@ -6,6 +6,7 @@ use Carp::Assert;
 use YAML::Tiny;
 use Data::Dumper ;
 
+our $usage ;
 our $verbose ;
 our $chdir ;
 our $rc ;
@@ -21,6 +22,9 @@ while(@ARGV) {
   }
   elsif ($ARGV[0] eq '-v') {
     shift @ARGV ; $verbose = 1 ;
+  }
+  elsif ($ARGV[0] eq '-h') {
+    shift @ARGV ; $usage = 1 ;
   }
   elsif ($ARGV[0] eq '-C') {
     shift @ARGV; $chdir = shift @ARGV;
@@ -39,6 +43,10 @@ unless ($rc) {
   $rc = $rc->[0] || confess "malformed YAML: ".Dumper($rc) ;
 }
 
+if ($usage) {
+  usage(); exit ;
+}
+
 foreach my $s (@sandboxes) {
   dosandbox($s) ;
 }
@@ -50,6 +58,15 @@ our $cmd = "$prog$args";
 chdir($chdir) if (defined $chdir);
 print STDERR $cmd."\n" if $main::verbose ;
 exec $cmd;
+
+sub usage {
+  print STDERR "Available sandboxes:\n";
+  foreach my $s (sort (keys %{ $rc->{sandboxes} })) {
+    my $desc = "No description available" ;
+    $desc = $rc->{sandboxes}->{$s}->{description} if exists $rc->{sandboxes}->{$s}->{description} ;
+    print STDERR "\t$s: $desc\n" ;
+  }
+}
 
 sub dosandbox {
   my $s = shift;
