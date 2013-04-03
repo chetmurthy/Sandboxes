@@ -6,6 +6,10 @@ composite:
   ZK.DEBUG:
     - Caml4.00.DEBUG
     - Thrift-ZK
+  Leveldb.DEBUG:
+    - Caml4.00.DEBUG
+    - Thrift-ZK
+    - Leveldb
 sandboxes:
   Caml4.00:
     directory: '$HOME/Hack/Caml4.00'
@@ -26,6 +30,10 @@ sandboxes:
     directory: '$HOME/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
     varname: THRIFTROOT
+  Leveldb:
+    directory: '$HOME/Hack/Leveldb'
+    rc: '$HOME/.sandbox/bashrc/Leveldb.bashrc'
+    varname: LEVELDBROOT
   Thrift-ZK.TEST:
     directory: '$HOME/Hack.IBM/Thrift-ZK'
     rc:
