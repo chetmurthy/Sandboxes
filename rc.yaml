@@ -5,10 +5,10 @@ composite:
     - Thrift-ZK
   ZK.DEBUG:
     - Caml4.00.DEBUG
+    - Leveldb
     - Thrift-ZK
   Leveldb.DEBUG:
     - Caml4.00.DEBUG
-    - Thrift-ZK
     - Leveldb
 sandboxes:
   Caml4.00:
