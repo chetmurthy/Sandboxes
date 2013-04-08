@@ -47,17 +47,36 @@ if ($usage) {
   usage(); exit ;
 }
 
-foreach my $s (@sandboxes) {
-  dosandbox($s) ;
+our $rcfile ;
+{
+  my $txt = "unset BASH_ENV\n" ;
+  $txt .= <<"EOF";
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+EOF
+  foreach my $s (@sandboxes) {
+    $txt .= dosandbox($s) ;
+    sbpush($s) ;
+  }
+
+  if ($chdir) {
+    $txt .= "cd $chdir\n";
+  }
+
+  $rcfile = "/tmp/RUN.bash$$";
+  f_write($rcfile, $txt) ;
+  $ENV{BASH_ENV} = $rcfile ;
+}
+END {
+  unlink($rcfile) if $rcfile ;
 }
 
 our $prog = shift @ARGV;
 
 our $args = @ARGV ? (" '".join("' '",@ARGV)."'") : "";
 our $cmd = "$prog$args";
-chdir($chdir) if (defined $chdir);
+$cmd = "bash -c \"$cmd\"" if ($prog ne 'bash') ;
 print STDERR $cmd."\n" if $main::verbose ;
-exec $cmd;
+v_system($cmd);
 
 sub usage {
   print STDERR "Available sandboxes:\n";
@@ -71,10 +90,12 @@ sub usage {
 sub dosandbox {
   my $s = shift;
 
+  my $txt = "";
+
   if (exists $rc->{'composite'}->{$s}) {
     my @sl = @{ $rc->{'composite'}->{$s} } ;
     foreach my $subs (@sl) {
-      dosandbox($subs) ;
+      $txt .= dosandbox($subs) ;
     }
   }
   elsif (exists $rc->{'sandboxes'}->{$s}) {
@@ -83,7 +104,7 @@ sub dosandbox {
     my $rc = $sbh->{'rc'} ;
     my $varname = $sbh->{'varname'} ;
 
-    $ENV{$varname} = $dir ;
+    $txt .= "export $varname=$dir\n";
     
     my @rcfiles ;
     if (ref($rc) eq 'ARRAY') {
@@ -94,11 +115,12 @@ sub dosandbox {
     }
     foreach my $f (@rcfiles) {
       my $absf = selectrc(envsubst($f)) ;
-      dorc($dir, $absf) ;
+      $txt .= dorc($dir, $absf) ;
     }
-    sbpush($s) ;
   }
   else { confess "unknown sandbox $s" ; }
+
+  return $txt ;
 }
 
 sub dorc {
@@ -108,10 +130,13 @@ sub dorc {
   my $wd = `pwd` ;
   chomp $wd ;
 
-  chdir($sbdir) || confess "cannot chdir to sandboxdir <<$sbdir>>" ;
+  my $txt = <<"EOF";
+cd $sbdir
+. $rcfile
+cd $wd
+EOF
 
-  bashdot(". $rcfile");
-  chdir($wd) ;
+  return $txt ;
 }
 
 sub envsubst {
@@ -208,4 +233,11 @@ sub sbpush {
   else {
     $ENV{SANDBOX} = "[$tok]" ;
   }
+}
+
+sub f_write {
+  my $f = shift;
+  open(F,">$f") || die "cannot open $f for writing";
+  print F @_;
+  close(F);
 }

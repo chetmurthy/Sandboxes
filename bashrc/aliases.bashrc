@@ -1,3 +1,6 @@
+if [ `type -t wn`"" != "function" ]
+then
+
 function wn {
  echo -ne "\033]0;$*\007";
 }
@@ -73,3 +76,4 @@ function parse_git_stash_size {
 #export PS1="[$red\u$NC@$green\t$NC] \h : $cyan\w $yellow\$(parse_git_branch) $RED\$(parse_git_stash_size)\n$NC\$ "
 
 set -b
+fi
