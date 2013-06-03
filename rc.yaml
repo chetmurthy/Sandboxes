@@ -7,42 +7,48 @@ composite:
     - Caml4.00.DEBUG
     - Leveldb
     - Thrift-ZK
+    - Caravan
   Leveldb.DEBUG:
     - Caml4.00.DEBUG
     - Leveldb
 sandboxes:
   Caml4.00:
-    directory: '$HOME/Hack/Caml4.00'
+    directory: '/u/chet/Hack/Caml4.00'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (Unmodified)"
   Caml4.00.DEBUG:
-    directory: '$HOME/Hack/Caml4.00.DEBUG'
+    directory: '/u/chet/Hack/Caml4.00.DEBUG'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (modified with big-file patch)"
   Caml4.00.TEST:
-    directory: '$HOME/Hack/Caml4.00.TEST'
+    directory: '/u/chet/Hack/Caml4.00.TEST'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (for testing)"
   Thrift-ZK:
-    directory: '$HOME/Hack.IBM/Thrift-ZK'
+    directory: '/u/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
     varname: THRIFTROOT
   Leveldb:
-    directory: '$HOME/Hack/Leveldb'
+    directory: '/u/chet/Hack/Leveldb'
     rc: '$HOME/.sandbox/bashrc/Leveldb.bashrc'
     varname: LEVELDBROOT
   Thrift-ZK.TEST:
-    directory: '$HOME/Hack.IBM/Thrift-ZK'
+    directory: '/u/chet/Hack.IBM/Thrift-ZK'
     rc:
       - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc.0'
       - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
     varname: THRIFTROOT
+  Caravan:
+    directory: '/u/josej/Hack.IBM/Caravan'
+    rc: '$HOME/.sandbox/bashrc/Caravan.bashrc'
+    varname: CARAVANROOT
+
