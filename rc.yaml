@@ -1,4 +1,11 @@
 ---
+invocations:
+  -
+    sandbox: ZK.DEBUG
+    directory: '$THRIFTROOT/src/caravan'
+  -
+    sandbox: ZK.DEBUG
+    directory: '$THRIFTROOT'
 composite:
   ZK:
     - Caml4.00
@@ -48,7 +55,7 @@ sandboxes:
       - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
     varname: THRIFTROOT
   Caravan:
-    directory: '/u/josej/Hack.IBM/Caravan'
+    directory: '/u/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Caravan.bashrc'
     varname: CARAVANROOT
 
