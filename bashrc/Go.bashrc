@@ -1,0 +1,2 @@
+export PATH=$GOROOT/bin:$PATH
+export LD_LIBRARY_PATH=$GOROOT/lib:$LD_LIBRARY_PATH

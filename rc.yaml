@@ -18,7 +18,18 @@ composite:
   Leveldb.DEBUG:
     - Caml4.00.DEBUG
     - Leveldb
+  Go:
+    - Base
+    - Caml4.02.3
+    - Go1.4.2
 sandboxes:
+  Base:
+    directory: '/u/chet/Hack/Base'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Base.bashrc'
+    varname: BASEROOT
+    description: "Base sandbox (stuff like HTTP proxy)"
   Caml4.00:
     directory: '/u/chet/Hack/Caml4.00'
     rc:
@@ -26,6 +37,13 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (Unmodified)"
+  Go1.4.2:
+    directory: '/u/chet/Hack/Go/go'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Go.bashrc'
+    varname: GOROOT
+    description: "Go 1.4.2 installation (Unmodified)"
   Caml4.00.DEBUG:
     directory: '/u/chet/Hack/Caml4.00.DEBUG'
     rc:
@@ -40,6 +58,20 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (for testing)"
+  Caml4.02.1:
+    directory: '/u/chet/Hack/ocaml-4.02.1'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.02.3 installation"
+  Caml4.02.3:
+    directory: '/u/chet/Hack/ocaml-4.02.3'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.02.3 installation"
   Thrift-ZK:
     directory: '/u/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
@@ -58,4 +90,17 @@ sandboxes:
     directory: '/u/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Caravan.bashrc'
     varname: CARAVANROOT
-
+  Rust0.8:
+    directory: '/u/chet/Hack/Rust0.8'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Rust.bashrc'
+    varname: RUSTROOT
+    description: "Rust 0.8 installation (Unmodified)"
+  Rust:
+    directory: '/u/chet/Hack/Rust'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Rust.bashrc'
+    varname: RUSTROOT
+    description: "Rust GIT master installation (Unmodified)"

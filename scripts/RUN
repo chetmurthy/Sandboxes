@@ -83,7 +83,7 @@ sub usage {
   foreach my $s (sort (keys %{ $rc->{sandboxes} })) {
     my $desc = "No description available" ;
     $desc = $rc->{sandboxes}->{$s}->{description} if exists $rc->{sandboxes}->{$s}->{description} ;
-    print STDERR "\t$s: $desc\n" ;
+    print STDERR "\t$s - $desc\n" ;
   }
 }
 
