@@ -24,88 +24,88 @@ composite:
     - Go1.4.2
 sandboxes:
   Base:
-    directory: '/u/chet/Hack/Base'
+    directory: '/home/chet/Hack/Base'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Base.bashrc'
     varname: BASEROOT
     description: "Base sandbox (stuff like HTTP proxy)"
   Caml4.00:
-    directory: '/u/chet/Hack/Caml4.00'
+    directory: '/home/chet/Hack/Caml4.00'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (Unmodified)"
   Go1.4.2:
-    directory: '/u/chet/Hack/Go/go'
+    directory: '/home/chet/Hack/Go/go'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Go.bashrc'
     varname: GOROOT
     description: "Go 1.4.2 installation (Unmodified)"
   Caml4.00.DEBUG:
-    directory: '/u/chet/Hack/Caml4.00.DEBUG'
+    directory: '/home/chet/Hack/Caml4.00.DEBUG'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (modified with big-file patch)"
   Caml4.00.TEST:
-    directory: '/u/chet/Hack/Caml4.00.TEST'
+    directory: '/home/chet/Hack/Caml4.00.TEST'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.1 installation (for testing)"
   Caml4.02.1:
-    directory: '/u/chet/Hack/ocaml-4.02.1'
+    directory: '/home/chet/Hack/ocaml-4.02.1'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.02.3 installation"
   Caml4.02.3:
-    directory: '/u/chet/Hack/ocaml-4.02.3'
+    directory: '/home/chet/Hack/ocaml-4.02.3'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.02.3 installation"
   Caml4.03.0:
-    directory: '/u/chet/Hack/ocaml-4.03.0'
+    directory: '/home/chet/Hack/ocaml-4.03.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.03.0.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.02.3 installation"
   Thrift-ZK:
-    directory: '/u/chet/Hack.IBM/Thrift-ZK'
+    directory: '/home/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
     varname: THRIFTROOT
   Leveldb:
-    directory: '/u/chet/Hack/Leveldb'
+    directory: '/home/chet/Hack/Leveldb'
     rc: '$HOME/.sandbox/bashrc/Leveldb.bashrc'
     varname: LEVELDBROOT
   Thrift-ZK.TEST:
-    directory: '/u/chet/Hack.IBM/Thrift-ZK'
+    directory: '/home/chet/Hack.IBM/Thrift-ZK'
     rc:
       - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc.0'
       - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
     varname: THRIFTROOT
   Caravan:
-    directory: '/u/chet/Hack.IBM/Thrift-ZK'
+    directory: '/home/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Caravan.bashrc'
     varname: CARAVANROOT
   Rust0.8:
-    directory: '/u/chet/Hack/Rust0.8'
+    directory: '/home/chet/Hack/Rust0.8'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Rust.bashrc'
     varname: RUSTROOT
     description: "Rust 0.8 installation (Unmodified)"
   Rust:
-    directory: '/u/chet/Hack/Rust'
+    directory: '/home/chet/Hack/Rust'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Rust.bashrc'
