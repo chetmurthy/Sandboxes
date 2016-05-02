@@ -143,7 +143,7 @@ sub envsubst {
   my $txt = shift ;
 
   my $result = "" ;
-  while ($txt =~ s,(\$[a-z][a-z0-9]*|\${[a-z][a-z0-9]*}),,si) {
+  while ($txt =~ s,(\$[a-z][a-z0-9]*|\$\{[a-z][a-z0-9]*\}),,si) {
     $result .= $` . env($1) ;
     $txt = $' ;
   }
@@ -158,7 +158,7 @@ sub env {
   if ($x =~ m,\$([a-z][a-z0-9]*),i) {
     $varna = $1 ;
   }
-  elsif ($x =~ m,\${([a-z][a-z0-9]*)},i) {
+  elsif ($x =~ m,\$\{([a-z][a-z0-9]*)\},i) {
     $varna = $1 ;
   }
   else { confess "agh!  bad env var <<$x>>" ; }
