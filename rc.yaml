@@ -22,49 +22,18 @@ composite:
     - Base
     - Caml4.02.3
     - Go1.4.2
+  IL:
+    - Base
+    - Caml4.02.3
+    - infraledger
 sandboxes:
   Base:
-    directory: '/home/chet/Hack/Base'
+    directory: '/home/chet/Hack'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Base.bashrc'
     varname: BASEROOT
     description: "Base sandbox (stuff like HTTP proxy)"
-  Caml4.00:
-    directory: '/home/chet/Hack/Caml4.00'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
-    varname: CAMLROOT
-    description: "Ocaml 4.00.1 installation (Unmodified)"
-  Go1.4.2:
-    directory: '/home/chet/Hack/Go/go'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Go.bashrc'
-    varname: GOROOT
-    description: "Go 1.4.2 installation (Unmodified)"
-  Caml4.00.DEBUG:
-    directory: '/home/chet/Hack/Caml4.00.DEBUG'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
-    varname: CAMLROOT
-    description: "Ocaml 4.00.1 installation (modified with big-file patch)"
-  Caml4.00.TEST:
-    directory: '/home/chet/Hack/Caml4.00.TEST'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.00.bashrc'
-    varname: CAMLROOT
-    description: "Ocaml 4.00.1 installation (for testing)"
-  Caml4.02.1:
-    directory: '/home/chet/Hack/ocaml-4.02.1'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
-    varname: CAMLROOT
-    description: "Ocaml 4.02.3 installation"
   Caml4.02.3:
     directory: '/home/chet/Hack/ocaml-4.02.3'
     rc:
@@ -97,17 +66,7 @@ sandboxes:
     directory: '/home/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Caravan.bashrc'
     varname: CARAVANROOT
-  Rust0.8:
-    directory: '/home/chet/Hack/Rust0.8'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Rust.bashrc'
-    varname: RUSTROOT
-    description: "Rust 0.8 installation (Unmodified)"
-  Rust:
-    directory: '/home/chet/Hack/Rust'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Rust.bashrc'
-    varname: RUSTROOT
-    description: "Rust GIT master installation (Unmodified)"
+  infraledger:
+    directory: '/home/chet/Hack/infraledger'
+    rc: '/home/chet/Hack/infraledger/dot.bashrc'
+    varname: ILROOT
