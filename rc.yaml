@@ -22,9 +22,17 @@ composite:
     - Base
     - Caml4.02.3
     - Go1.4.2
+  IL-4.03.0:
+    - Base
+    - Caml4.03.0
+    - infraledger
   IL:
     - Base
     - Caml4.02.3
+    - infraledger
+  IL-TEST:
+    - Base
+    - Caml4.02.3-TEST
     - infraledger
 sandboxes:
   Base:
@@ -36,6 +44,13 @@ sandboxes:
     description: "Base sandbox (stuff like HTTP proxy)"
   Caml4.02.3:
     directory: '/home/chet/Hack/ocaml-4.02.3'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.02.3 installation"
+  Caml4.02.3-TEST:
+    directory: '/home/chet/Hack/ocaml-4.02.3-TEST'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
