@@ -79,11 +79,16 @@ print STDERR $cmd."\n" if $main::verbose ;
 v_system($cmd);
 
 sub usage {
-  print STDERR "Available sandboxes:\n";
+  print STDERR "Available base sandboxes:\n";
   foreach my $s (sort (keys %{ $rc->{sandboxes} })) {
     my $desc = "No description available" ;
     $desc = $rc->{sandboxes}->{$s}->{description} if exists $rc->{sandboxes}->{$s}->{description} ;
     print STDERR "\t$s - $desc\n" ;
+  }
+  print STDERR "Composite sandboxes:\n";
+  foreach my $s (sort (keys %{ $rc->{composite} })) {
+    my @layers = @{ $rc->{composite}->{$s} } ;
+    print "$s - ".join(" THEN ",@layers)."\n";
   }
 }
 
@@ -106,6 +111,13 @@ sub dosandbox {
 
     $txt .= "export $varname=$dir\n";
     
+    if (exists $sbh->{'set'}) {
+      my %set = %{$sbh->{'set'}} ;
+      foreach my $k (keys %set) {
+	$txt .= "export $k=\"".quotemeta($set{$k})."\"\n";
+      }
+    }
+
     my @rcfiles ;
     if (ref($rc) eq 'ARRAY') {
       @rcfiles = @{ $rc } ;

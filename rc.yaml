@@ -18,30 +18,30 @@ composite:
   Leveldb.DEBUG:
     - Caml4.00.DEBUG
     - Leveldb
-  Go:
+  IL-4.02.3:
     - Base
     - Caml4.02.3
-    - Go1.4.2
+    - infraledger
   IL-4.03.0:
     - Base
     - Caml4.03.0
     - infraledger
-  IL:
+  IL-4.04.0:
     - Base
-    - Caml4.02.3
+    - Caml4.04.0
     - infraledger
   IL-DEV:
     - Base
-    - Caml4.02.3
     - infraledger-dev
-  IL0:
+  IL-PUB:
     - Base
-    - Caml4.02.3-0
-    - infraledger-0
-  IL-PROF:
+    - infraledger-pub
+  IL-TEST-4.03.0:
     - Base
-    - Caml4.02.3-PROF
-    - infraledger.prof
+    - infraledger-test-4.03.0
+  IL-TEST-4.04.0:
+    - Base
+    - infraledger-test-4.04.0
 sandboxes:
   Base:
     directory: '/home/chet/Hack'
@@ -57,27 +57,20 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.02.3 installation"
-  Caml4.02.3-0:
-    directory: '/home/chet/Hack/ocaml-4.02.3-0'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
-    varname: CAMLROOT
-    description: "Ocaml 4.02.3 installation"
-  Caml4.02.3-PROF:
-    directory: '/home/chet/Hack/ocaml-4.02.3-PROF'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
-    varname: CAMLROOT
-    description: "Ocaml 4.02.3 installation"
   Caml4.03.0:
     directory: '/home/chet/Hack/ocaml-4.03.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.03.0.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
-    description: "Ocaml 4.02.3 installation"
+    description: "Ocaml 4.03.0 installation"
+  Caml4.04.0:
+    directory: '/home/chet/Hack/ocaml-4.04.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.04.0 installation"
   Thrift-ZK:
     directory: '/home/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
@@ -99,20 +92,34 @@ sandboxes:
   infraledger:
     directory: '/home/chet/Hack/IL'
     rc: '/home/chet/Hack/IL/infraledger/dot.bashrc'
-    varname: ILROOT
+    varname: ILBUILD
+  infraledger-prod:
+    directory: '/home/chet/Hack/IL-PROD'
+    rc: '/home/chet/Hack/IL-PROD/infraledger/dot.bashrc'
+    varname: ILBUILD
+    set:
+      ILPROD: 1
   infraledger-dev:
     directory: '/home/chet/Hack/IL-DEV'
     rc: '/home/chet/Hack/IL-DEV/infraledger/dot.bashrc'
-    varname: ILDEV
-  infraledger-0:
-    directory: '/home/chet/Hack/infraledger-0'
-    rc: '/home/chet/Hack/infraledger-0/src/infraledger/dot.bashrc'
-    varname: ILROOT
-  infraledger.old:
-    directory: '/home/chet/Hack/infraledger.old'
-    rc: '/home/chet/Hack/infraledger.old/src/infraledger/dot.bashrc'
-    varname: ILROOT
-  infraledger.prof:
-    directory: '/home/chet/Hack/infraledger.prof'
-    rc: '/home/chet/Hack/infraledger.prof/src/infraledger/dot.bashrc'
-    varname: ILROOT
+    varname: ILBUILD
+    set:
+      ILDEV: 1
+  infraledger-pub:
+    directory: '/home/chet/Hack/IL-PUB'
+    rc: '/export/IL/infraledger/rc.d/dot.bashrc'
+    varname: ILBUILD
+    set:
+      ILPUB: 1
+  infraledger-test-4.03.0:
+    directory: '/home/chet/Hack/IL-TEST-4.03.0'
+    rc: '/home/chet/Hack/IL-TEST-4.03.0/infraledger/dot.bashrc'
+    varname: ILBUILD
+    set:
+      ILPROD: 1
+  infraledger-test-4.04.0:
+    directory: '/home/chet/Hack/IL-TEST-4.04.0'
+    rc: '/home/chet/Hack/IL-TEST-4.04.0/infraledger/dot.bashrc'
+    varname: ILBUILD
+    set:
+      ILPROD: 1
