@@ -36,12 +36,10 @@ composite:
   IL-PUB:
     - Base
     - infraledger-pub
-  IL-TEST-4.03.0:
-    - Base
-    - infraledger-test-4.03.0
-  IL-TEST-4.04.0:
-    - Base
-    - infraledger-test-4.04.0
+  CTN-FULL:
+    - golang-1.8
+    - nodejs-8.4.0
+    - CTN
 sandboxes:
   Base:
     directory: '/home/chet/Hack'
@@ -64,8 +62,29 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.03.0 installation"
+  Caml4.03.0-patched:
+    directory: '/home/chet/Hack/ocaml-4.03.0-patched'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.03.0 installation (xleroy's double-free patch)"
   Caml4.04.0:
     directory: '/home/chet/Hack/ocaml-4.04.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.04.0 installation"
+  Caml4.04.0-patched:
+    directory: '/home/chet/Hack/ocaml-4.04.0-patched'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.04.0 installation (xleroy's double-free patch)"
+  Caml4.04.1:
+    directory: '/home/chet/Hack/ocaml-4.04.1'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
@@ -123,3 +142,15 @@ sandboxes:
     varname: ILBUILD
     set:
       ILPROD: 1
+  golang-1.8:
+    directory: '/home/chet/Hack/golang-1.8/go-1.8-binary'
+    rc: '/home/chet/Hack/golang-1.8/dot.bashrc'
+    varname: GOROOT
+  nodejs-8.4.0:
+    directory: '/home/chet/Hack/nodejs-8.4.0'
+    rc: '/home/chet/Hack/nodejs-8.4.0/dot.bashrc'
+    varname: NODEJSROOT
+  CTN:
+    directory: '/home/chet/Hack/CTN'
+    rc: '/home/chet/Hack/CTN/dot.bashrc'
+    varname: CTNROOT
