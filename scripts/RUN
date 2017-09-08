@@ -129,6 +129,10 @@ sub dosandbox {
       my $absf = selectrc(envsubst($f)) ;
       $txt .= dorc($dir, $absf) ;
     }
+
+    if (exists $sbh->{'chdir'}) {
+      $main::chdir = $sbh->{'chdir'} ;
+    }
   }
   else { confess "unknown sandbox $s" ; }
 

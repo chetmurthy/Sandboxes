@@ -39,6 +39,7 @@ composite:
   CTN-FULL:
     - golang-1.8
     - nodejs-8.4.0
+    - protobuf-3.4.0
     - CTN
 sandboxes:
   Base:
@@ -89,7 +90,14 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
-    description: "Ocaml 4.04.0 installation"
+    description: "Ocaml 4.04.1 installation"
+  Caml4.04.2:
+    directory: '/home/chet/Hack/ocaml-4.04.2'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.04.2 installation"
   Thrift-ZK:
     directory: '/home/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
@@ -150,7 +158,12 @@ sandboxes:
     directory: '/home/chet/Hack/nodejs-8.4.0'
     rc: '/home/chet/Hack/nodejs-8.4.0/dot.bashrc'
     varname: NODEJSROOT
+  protobuf-3.4.0:
+    directory: '/home/chet/Hack/protobuf-3.4.0'
+    rc: '/home/chet/Hack/protobuf-3.4.0/dot.bashrc'
+    varname: PROTOBUFROOT
   CTN:
     directory: '/home/chet/Hack/CTN'
     rc: '/home/chet/Hack/CTN/dot.bashrc'
     varname: CTNROOT
+    chdir: '/home/chet/Hack/CTN'
