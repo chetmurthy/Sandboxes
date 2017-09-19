@@ -98,6 +98,13 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.04.2 installation"
+  Caml4.05:
+    directory: '/home/chet/Hack/ocaml-4.05'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.05 installation"
   Thrift-ZK:
     directory: '/home/chet/Hack.IBM/Thrift-ZK'
     rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
