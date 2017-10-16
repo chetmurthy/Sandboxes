@@ -169,8 +169,15 @@ sandboxes:
     directory: '/home/chet/Hack/protobuf-3.4.0'
     rc: '/home/chet/Hack/protobuf-3.4.0/dot.bashrc'
     varname: PROTOBUFROOT
+  thrift-0.10.0:
+    directory: '/home/chet/Hack/thrift-0.10.0'
+    rc: '$HOME/.sandbox/bashrc/thrift-0.10.0.bashrc'
+    varname: THRIFTROOT
+  brew:
+    directory: '/home/chet/Hack/Brew'
+    rc: '/home/chet/Hack/Brew/dot.bashrc'
+    varname: BREWROOT
   CTN:
     directory: '/home/chet/Hack/CTN'
     rc: '/home/chet/Hack/CTN/dot.bashrc'
     varname: CTNROOT
-    chdir: '/home/chet/Hack/CTN'
