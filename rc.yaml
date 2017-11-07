@@ -1,23 +1,5 @@
 ---
-invocations:
-  -
-    sandbox: ZK.DEBUG
-    directory: '$THRIFTROOT/src/caravan'
-  -
-    sandbox: ZK.DEBUG
-    directory: '$THRIFTROOT'
 composite:
-  ZK:
-    - Caml4.00
-    - Thrift-ZK
-  ZK.DEBUG:
-    - Caml4.00.DEBUG
-    - Leveldb
-    - Thrift-ZK
-    - Caravan
-  Leveldb.DEBUG:
-    - Caml4.00.DEBUG
-    - Leveldb
   IL-4.02.3:
     - Base
     - Caml4.02.3
@@ -41,6 +23,10 @@ composite:
     - nodejs-8.4.0
     - protobuf-3.4.0
     - CTN
+  Thrift:
+    - thrift-0.10.0
+    - golang-1.8
+    - Caml4.05
 sandboxes:
   Base:
     directory: '/home/chet/Hack'
@@ -105,24 +91,6 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.05 installation"
-  Thrift-ZK:
-    directory: '/home/chet/Hack.IBM/Thrift-ZK'
-    rc: '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
-    varname: THRIFTROOT
-  Leveldb:
-    directory: '/home/chet/Hack/Leveldb'
-    rc: '$HOME/.sandbox/bashrc/Leveldb.bashrc'
-    varname: LEVELDBROOT
-  Thrift-ZK.TEST:
-    directory: '/home/chet/Hack.IBM/Thrift-ZK'
-    rc:
-      - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc.0'
-      - '$HOME/.sandbox/bashrc/Thrift-ZK.bashrc'
-    varname: THRIFTROOT
-  Caravan:
-    directory: '/home/chet/Hack.IBM/Thrift-ZK'
-    rc: '$HOME/.sandbox/bashrc/Caravan.bashrc'
-    varname: CARAVANROOT
   infraledger:
     directory: '/home/chet/Hack/IL'
     rc: '/home/chet/Hack/IL/infraledger/dot.bashrc'
@@ -168,6 +136,10 @@ sandboxes:
   protobuf-3.4.0:
     directory: '/home/chet/Hack/protobuf-3.4.0'
     rc: '/home/chet/Hack/protobuf-3.4.0/dot.bashrc'
+    varname: PROTOBUFROOT
+  protobuf-2.6.1:
+    directory: '/home/chet/Hack/protobuf-2.6.1'
+    rc: '/home/chet/Hack/protobuf-2.6.1/dot.bashrc'
     varname: PROTOBUFROOT
   thrift-0.10.0:
     directory: '/home/chet/Hack/thrift-0.10.0'
