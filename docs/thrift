@@ -3,6 +3,6 @@ to configure
 
 ./configure -prefix=$THRIFTROOT --without-ruby --without-java
 
-PY_PREFIX=$THRIFTROOT CXXFLAGS=" -g -std=c++11" CFLAGS=-g ./configure --prefix=$THRIFTROOT --exec-prefix=$THRIFTROOT --without-ruby --without-java
+PY_PREFIX=$THRIFTROOT CXXFLAGS=" -g -std=c++11" CFLAGS=-g ./configure --prefix=$THRIFTROOT --exec-prefix=$THRIFTROOT --without-ruby --without-java --with-go
 
 DESTDIR=$THRIFTROOT make install

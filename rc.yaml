@@ -26,7 +26,20 @@ composite:
   Thrift:
     - thrift-0.10.0
     - golang-1.8
-    - Caml4.05
+    - nodejs-8.4.0
+    - Caml4.04.2
+  FBThrift:
+    - fbthrift
+    - golang-1.8
+    - nodejs-8.4.0
+    - Caml4.04.2
+  Jaxo:
+    - jaxo
+    - golang-1.8
+    - Caml4.04.2
+  Ethereum:
+    - ethereum
+    - nodejs-8.9.4
 sandboxes:
   Base:
     directory: '/home/chet/Hack'
@@ -91,6 +104,20 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.05 installation"
+  Caml4.07.1:
+    directory: '/home/chet/Hack/Ocaml/4.07.1'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.07.1/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.07.1 installation"
+  Caml4.08.0+beta1:
+    directory: '/home/chet/Hack/Ocaml/4.08.0+beta1'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.08.0+beta1/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.08.0+beta1 installation"
   infraledger:
     directory: '/home/chet/Hack/IL'
     rc: '/home/chet/Hack/IL/infraledger/dot.bashrc'
@@ -131,7 +158,19 @@ sandboxes:
     varname: GOROOT
   nodejs-8.4.0:
     directory: '/home/chet/Hack/nodejs-8.4.0'
-    rc: '/home/chet/Hack/nodejs-8.4.0/dot.bashrc'
+    rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
+    varname: NODEJSROOT
+  nodejs-8.9.4:
+    directory: '/home/chet/Hack/nodejs-8.9.4'
+    rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
+    varname: NODEJSROOT
+  nodejs-8.11.3:
+    directory: '/home/chet/Hack/nodejs-8.11.3'
+    rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
+    varname: NODEJSROOT
+  nodejs-10.6.0:
+    directory: '/home/chet/Hack/nodejs-10.6.0'
+    rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
     varname: NODEJSROOT
   protobuf-3.4.0:
     directory: '/home/chet/Hack/protobuf-3.4.0'
@@ -145,6 +184,10 @@ sandboxes:
     directory: '/home/chet/Hack/thrift-0.10.0'
     rc: '$HOME/.sandbox/bashrc/thrift-0.10.0.bashrc'
     varname: THRIFTROOT
+  fbthrift:
+    directory: '/home/chet/Hack/fbthrift'
+    rc: '/home/chet/Hack/fbthrift/dot.bashrc'
+    varname: FBTHRIFTROOT
   brew:
     directory: '/home/chet/Hack/Brew'
     rc: '/home/chet/Hack/Brew/dot.bashrc'
@@ -153,3 +196,34 @@ sandboxes:
     directory: '/home/chet/Hack/CTN'
     rc: '/home/chet/Hack/CTN/dot.bashrc'
     varname: CTNROOT
+  ethereum:
+    directory: '/home/chet/Hack/Ethereum'
+    chdir: '/home/chet/Hack/Ethereum/src'
+    rc: '/home/chet/Hack/Ethereum/dot.bashrc'
+    varname: ETHEREUMROOT
+  jaxo:
+    directory: '/home/chet/Hack/Jaxo'
+    rc: '/home/chet/Hack/Jaxo/dot.bashrc'
+    varname: JAXOROOT
+  Bitcoin:
+    directory: '/home/chet/Hack/Bitcoin'
+    rc: '/home/chet/Hack/Bitcoin/dot.bashrc'
+    varname: BITCOINROOT
+  fzf:
+    directory: '/home/chet/Hack/FZF'
+    rc: '/home/chet/Hack/FZF/dot.bashrc'
+    varname: FZFROOT
+  QASM:
+    directory: '/home/chet/Hack/QASM'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/QASM/QiskitDevenv/bin/activate'
+    varname: QASMROOT
+    description: "QASM hacking"
+  ismlgo:
+    directory: '/home/chet/Hack/ismlgo'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/ismlgo/dot.bashrc'
+    varname: ISMLGOROOT
+    description: "ocaml-golang hacking"

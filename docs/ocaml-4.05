@@ -1,4 +1,4 @@
 export CAML_GITREV=4.05.0
-export CAMLP4VERSION=4.05+1
+export CAMLP4VERSION=4.05+2
 export CAML_GITURL=/home/chet/Hack/Github/ocaml CAMLBREW_GITURL=/home/chet/Hack/Github/ocamlbrew CAMLP4_GITURL=/home/chet/Hack/Github/camlp4
 ~/Hack/IL/infraledger/src/bootstrap/04.OCAML-ONLY
