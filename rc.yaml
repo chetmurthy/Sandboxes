@@ -40,6 +40,10 @@ composite:
   Ethereum:
     - ethereum
     - nodejs-8.9.4
+  ISMLGO:
+    - fzf
+    - Caml4.07.1-ISMLGO
+    - ismlgo
 sandboxes:
   Base:
     directory: '/home/chet/Hack'
@@ -111,6 +115,20 @@ sandboxes:
      -  '$HOME/Hack/Ocaml/4.07.1/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.07.1 installation"
+  Caml4.07.1-HACKING:
+    directory: '/home/chet/Hack/Ocaml/4.07.1-HACKING'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.07.1-HACKING/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.07.1 installation for HACKING"
+  Caml4.07.1-ISMLGO:
+    directory: '/home/chet/Hack/Ocaml/4.07.1-ISMLGO'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.07.1-ISMLGO/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.07.1 installation for ISMLGO"
   Caml4.08.0+beta1:
     directory: '/home/chet/Hack/Ocaml/4.08.0+beta1'
     rc:
