@@ -174,6 +174,14 @@ sandboxes:
     directory: '/home/chet/Hack/golang-1.8/go-1.8-binary'
     rc: '/home/chet/Hack/golang-1.8/dot.bashrc'
     varname: GOROOT
+  golang-1.12.1-binary:
+    directory: '/home/chet/Hack/Golang/go-1.12.1-binary'
+    rc: '$HOME/.sandbox/bashrc/golang.bashrc'
+    varname: GOROOT
+  golang-1.12.1:
+    directory: '/home/chet/Hack/Golang/go-1.12.1'
+    rc: '$HOME/.sandbox/bashrc/golang.bashrc'
+    varname: GOROOT
   nodejs-8.4.0:
     directory: '/home/chet/Hack/nodejs-8.4.0'
     rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
