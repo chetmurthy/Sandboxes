@@ -45,6 +45,9 @@ composite:
     - Caml4.07.1-ISMLGO
     - golang-1.12.1
     - ismlgo
+  Caml:
+    - fzf
+    - Caml4.07.1
 sandboxes:
   Base:
     directory: '/home/chet/Hack'
