@@ -56,6 +56,42 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Base.bashrc'
     varname: BASEROOT
     description: "Base sandbox (stuff like HTTP proxy)"
+  CamlGENERIC:
+    directory: '/home/chet/Hack/Ocaml/GENERIC'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/GENERIC/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml GENERIC installation"
+  Caml4.00.0:
+    directory: '/home/chet/Hack/Ocaml/4.00.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.00.0/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.00.0 installation"
+  Caml4.01.0:
+    directory: '/home/chet/Hack/Ocaml/4.01.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.01.0/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.01.0 installation"
+  Caml4.02.0:
+    directory: '/home/chet/Hack/Ocaml/4.02.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.02.0/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.02.0 installation"
+  Caml4.03.0:
+    directory: '/home/chet/Hack/Ocaml/4.03.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.03.0/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.03.0 installation"
   Caml4.02.3:
     directory: '/home/chet/Hack/ocaml-4.02.3'
     rc:
@@ -63,13 +99,6 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.02.3 installation"
-  Caml4.03.0:
-    directory: '/home/chet/Hack/ocaml-4.03.0'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
-    varname: CAMLROOT
-    description: "Ocaml 4.03.0 installation"
   Caml4.03.0-patched:
     directory: '/home/chet/Hack/ocaml-4.03.0-patched'
     rc:
@@ -112,6 +141,13 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.05 installation"
+  Caml4.06.1:
+    directory: '/home/chet/Hack/Ocaml/4.06.1'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.06.1/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.06.1 installation"
   Caml4.07.1:
     directory: '/home/chet/Hack/Ocaml/4.07.1'
     rc:
@@ -119,6 +155,27 @@ sandboxes:
      -  '$HOME/Hack/Ocaml/4.07.1/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.07.1 installation"
+  Caml4.08.0:
+    directory: '/home/chet/Hack/Ocaml/4.08.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.08.0/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.08.0 installation"
+  Caml4.09.0:
+    directory: '/home/chet/Hack/Ocaml/4.09.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.09.0/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.09.0 installation"
+  Caml4.10.0:
+    directory: '/home/chet/Hack/Ocaml/4.10.0'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.10.0/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.10.0 installation"
   Caml4.07.1-HACKING:
     directory: '/home/chet/Hack/Ocaml/4.07.1-HACKING'
     rc:
@@ -126,6 +183,13 @@ sandboxes:
      -  '$HOME/Hack/Ocaml/4.07.1-HACKING/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.07.1 installation for HACKING"
+  Caml4.07.1-GENPRINT:
+    directory: '/home/chet/Hack/Ocaml/4.07.1-genprint'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/4.07.1-genprint/dot.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml 4.07.1 installation for genprint"
   Caml4.07.1-ISMLGO:
     directory: '/home/chet/Hack/Ocaml/4.07.1-ISMLGO'
     rc:
