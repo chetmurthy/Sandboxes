@@ -64,6 +64,22 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
     varname: CAMLROOT
     description: "Ocaml GENERIC installation"
+  CamlGEN2:
+    directory: '/home/chet/Hack/Ocaml/GEN2'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/GEN2/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml GEN2 installation"
+  CamlGEN3:
+    directory: '/home/chet/Hack/Ocaml/GEN3'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ocaml/GEN3/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Ocaml GEN3 installation"
   Caml4.00.0:
     directory: '/home/chet/Hack/Ocaml/4.00.0'
     rc:
@@ -314,6 +330,13 @@ sandboxes:
      -  '$HOME/Hack/QASM/QiskitDevenv/bin/activate'
     varname: QASMROOT
     description: "QASM hacking"
+  Sean:
+    directory: '/home/chet/Hack/Sean'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Sean/bin/activate'
+    varname: SEANROOT
+    description: "Sean hacking"
   ismlgo:
     directory: '/home/chet/Hack/ismlgo'
     rc:
