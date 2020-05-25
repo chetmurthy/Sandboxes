@@ -330,13 +330,13 @@ sandboxes:
      -  '$HOME/Hack/QASM/QiskitDevenv/bin/activate'
     varname: QASMROOT
     description: "QASM hacking"
-  Sean:
-    directory: '/home/chet/Hack/Sean'
+  Sphinx:
+    directory: '/home/chet/Hack/Sphinx'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Sean/bin/activate'
-    varname: SEANROOT
-    description: "Sean hacking"
+     -  '$HOME/Hack/Sphinx/bin/activate'
+    varname: SPHINXROOT
+    description: "Sphinx hacking"
   ismlgo:
     directory: '/home/chet/Hack/ismlgo'
     rc:
