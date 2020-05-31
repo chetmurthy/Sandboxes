@@ -50,14 +50,14 @@ composite:
     - Caml4.07.1
 sandboxes:
   Base:
-    directory: '/home/chet/Hack'
+    directory: '$HOME/Hack'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Base.bashrc'
     varname: BASEROOT
     description: "Base sandbox (stuff like HTTP proxy)"
   CamlGENERIC:
-    directory: '/home/chet/Hack/Ocaml/GENERIC'
+    directory: '$HOME/Hack/Ocaml/GENERIC'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/GENERIC/dot.bashrc'
@@ -81,250 +81,250 @@ sandboxes:
     varname: CAMLROOT
     description: "Ocaml GEN3 installation"
   Caml4.00.0:
-    directory: '/home/chet/Hack/Ocaml/4.00.0'
+    directory: '$HOME/Hack/Ocaml/4.00.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.00.0/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.00.0 installation"
   Caml4.01.0:
-    directory: '/home/chet/Hack/Ocaml/4.01.0'
+    directory: '$HOME/Hack/Ocaml/4.01.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.01.0/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.01.0 installation"
   Caml4.02.0:
-    directory: '/home/chet/Hack/Ocaml/4.02.0'
+    directory: '$HOME/Hack/Ocaml/4.02.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.02.0/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.02.0 installation"
   Caml4.03.0:
-    directory: '/home/chet/Hack/Ocaml/4.03.0'
+    directory: '$HOME/Hack/Ocaml/4.03.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.03.0/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.03.0 installation"
   Caml4.02.3:
-    directory: '/home/chet/Hack/ocaml-4.02.3'
+    directory: '$HOME/Hack/ocaml-4.02.3'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.02.3 installation"
   Caml4.03.0-patched:
-    directory: '/home/chet/Hack/ocaml-4.03.0-patched'
+    directory: '$HOME/Hack/ocaml-4.03.0-patched'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.03.0 installation (xleroy's double-free patch)"
   Caml4.04.0:
-    directory: '/home/chet/Hack/ocaml-4.04.0'
+    directory: '$HOME/Hack/ocaml-4.04.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.04.0 installation"
   Caml4.04.0-patched:
-    directory: '/home/chet/Hack/ocaml-4.04.0-patched'
+    directory: '$HOME/Hack/ocaml-4.04.0-patched'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.04.0 installation (xleroy's double-free patch)"
   Caml4.04.1:
-    directory: '/home/chet/Hack/ocaml-4.04.1'
+    directory: '$HOME/Hack/ocaml-4.04.1'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.04.1 installation"
   Caml4.04.2:
-    directory: '/home/chet/Hack/ocaml-4.04.2'
+    directory: '$HOME/Hack/ocaml-4.04.2'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.04.2 installation"
   Caml4.05:
-    directory: '/home/chet/Hack/ocaml-4.05'
+    directory: '$HOME/Hack/ocaml-4.05'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/.sandbox/bashrc/Caml4.02.3.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.05 installation"
   Caml4.06.1:
-    directory: '/home/chet/Hack/Ocaml/4.06.1'
+    directory: '$HOME/Hack/Ocaml/4.06.1'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.06.1/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.06.1 installation"
   Caml4.07.1:
-    directory: '/home/chet/Hack/Ocaml/4.07.1'
+    directory: '$HOME/Hack/Ocaml/4.07.1'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.07.1/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.07.1 installation"
   Caml4.08.0:
-    directory: '/home/chet/Hack/Ocaml/4.08.0'
+    directory: '$HOME/Hack/Ocaml/4.08.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.08.0/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.08.0 installation"
   Caml4.09.0:
-    directory: '/home/chet/Hack/Ocaml/4.09.0'
+    directory: '$HOME/Hack/Ocaml/4.09.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.09.0/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.09.0 installation"
   Caml4.10.0:
-    directory: '/home/chet/Hack/Ocaml/4.10.0'
+    directory: '$HOME/Hack/Ocaml/4.10.0'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.10.0/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.10.0 installation"
   Caml4.07.1-HACKING:
-    directory: '/home/chet/Hack/Ocaml/4.07.1-HACKING'
+    directory: '$HOME/Hack/Ocaml/4.07.1-HACKING'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.07.1-HACKING/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.07.1 installation for HACKING"
   Caml4.07.1-GENPRINT:
-    directory: '/home/chet/Hack/Ocaml/4.07.1-genprint'
+    directory: '$HOME/Hack/Ocaml/4.07.1-genprint'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.07.1-genprint/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.07.1 installation for genprint"
   Caml4.07.1-ISMLGO:
-    directory: '/home/chet/Hack/Ocaml/4.07.1-ISMLGO'
+    directory: '$HOME/Hack/Ocaml/4.07.1-ISMLGO'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.07.1-ISMLGO/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.07.1 installation for ISMLGO"
   Caml4.08.0+beta1:
-    directory: '/home/chet/Hack/Ocaml/4.08.0+beta1'
+    directory: '$HOME/Hack/Ocaml/4.08.0+beta1'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/4.08.0+beta1/dot.bashrc'
     varname: CAMLROOT
     description: "Ocaml 4.08.0+beta1 installation"
   infraledger:
-    directory: '/home/chet/Hack/IL'
-    rc: '/home/chet/Hack/IL/infraledger/dot.bashrc'
+    directory: '$HOME/Hack/IL'
+    rc: '$HOME/Hack/IL/infraledger/dot.bashrc'
     varname: ILBUILD
   infraledger-prod:
-    directory: '/home/chet/Hack/IL-PROD'
-    rc: '/home/chet/Hack/IL-PROD/infraledger/dot.bashrc'
+    directory: '$HOME/Hack/IL-PROD'
+    rc: '$HOME/Hack/IL-PROD/infraledger/dot.bashrc'
     varname: ILBUILD
     set:
       ILPROD: 1
   infraledger-dev:
-    directory: '/home/chet/Hack/IL-DEV'
-    rc: '/home/chet/Hack/IL-DEV/infraledger/dot.bashrc'
+    directory: '$HOME/Hack/IL-DEV'
+    rc: '$HOME/Hack/IL-DEV/infraledger/dot.bashrc'
     varname: ILBUILD
     set:
       ILDEV: 1
   infraledger-pub:
-    directory: '/home/chet/Hack/IL-PUB'
+    directory: '$HOME/Hack/IL-PUB'
     rc: '/export/IL/infraledger/rc.d/dot.bashrc'
     varname: ILBUILD
     set:
       ILPUB: 1
   infraledger-test-4.03.0:
-    directory: '/home/chet/Hack/IL-TEST-4.03.0'
-    rc: '/home/chet/Hack/IL-TEST-4.03.0/infraledger/dot.bashrc'
+    directory: '$HOME/Hack/IL-TEST-4.03.0'
+    rc: '$HOME/Hack/IL-TEST-4.03.0/infraledger/dot.bashrc'
     varname: ILBUILD
     set:
       ILPROD: 1
   infraledger-test-4.04.0:
-    directory: '/home/chet/Hack/IL-TEST-4.04.0'
-    rc: '/home/chet/Hack/IL-TEST-4.04.0/infraledger/dot.bashrc'
+    directory: '$HOME/Hack/IL-TEST-4.04.0'
+    rc: '$HOME/Hack/IL-TEST-4.04.0/infraledger/dot.bashrc'
     varname: ILBUILD
     set:
       ILPROD: 1
   golang-1.8:
-    directory: '/home/chet/Hack/golang-1.8/go-1.8-binary'
-    rc: '/home/chet/Hack/golang-1.8/dot.bashrc'
+    directory: '$HOME/Hack/golang-1.8/go-1.8-binary'
+    rc: '$HOME/Hack/golang-1.8/dot.bashrc'
     varname: GOROOT
   golang-1.12.1-binary:
-    directory: '/home/chet/Hack/Golang/go-1.12.1-binary'
+    directory: '$HOME/Hack/Golang/go-1.12.1-binary'
     rc: '$HOME/.sandbox/bashrc/golang.bashrc'
     varname: GOROOT
   golang-1.12.1:
-    directory: '/home/chet/Hack/Golang/go-1.12.1'
+    directory: '$HOME/Hack/Golang/go-1.12.1'
     rc: '$HOME/.sandbox/bashrc/golang.bashrc'
     varname: GOROOT
   nodejs-8.4.0:
-    directory: '/home/chet/Hack/nodejs-8.4.0'
+    directory: '$HOME/Hack/nodejs-8.4.0'
     rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
     varname: NODEJSROOT
   nodejs-8.9.4:
-    directory: '/home/chet/Hack/nodejs-8.9.4'
+    directory: '$HOME/Hack/nodejs-8.9.4'
     rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
     varname: NODEJSROOT
   nodejs-8.11.3:
-    directory: '/home/chet/Hack/nodejs-8.11.3'
+    directory: '$HOME/Hack/nodejs-8.11.3'
     rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
     varname: NODEJSROOT
   nodejs-10.6.0:
-    directory: '/home/chet/Hack/nodejs-10.6.0'
+    directory: '$HOME/Hack/nodejs-10.6.0'
     rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
     varname: NODEJSROOT
   protobuf-3.4.0:
-    directory: '/home/chet/Hack/protobuf-3.4.0'
-    rc: '/home/chet/Hack/protobuf-3.4.0/dot.bashrc'
+    directory: '$HOME/Hack/protobuf-3.4.0'
+    rc: '$HOME/Hack/protobuf-3.4.0/dot.bashrc'
     varname: PROTOBUFROOT
   protobuf-2.6.1:
-    directory: '/home/chet/Hack/protobuf-2.6.1'
-    rc: '/home/chet/Hack/protobuf-2.6.1/dot.bashrc'
+    directory: '$HOME/Hack/protobuf-2.6.1'
+    rc: '$HOME/Hack/protobuf-2.6.1/dot.bashrc'
     varname: PROTOBUFROOT
   thrift-0.10.0:
-    directory: '/home/chet/Hack/thrift-0.10.0'
+    directory: '$HOME/Hack/thrift-0.10.0'
     rc: '$HOME/.sandbox/bashrc/thrift-0.10.0.bashrc'
     varname: THRIFTROOT
   fbthrift:
-    directory: '/home/chet/Hack/fbthrift'
-    rc: '/home/chet/Hack/fbthrift/dot.bashrc'
+    directory: '$HOME/Hack/fbthrift'
+    rc: '$HOME/Hack/fbthrift/dot.bashrc'
     varname: FBTHRIFTROOT
   brew:
-    directory: '/home/chet/Hack/Brew'
-    rc: '/home/chet/Hack/Brew/dot.bashrc'
+    directory: '$HOME/Hack/Brew'
+    rc: '$HOME/Hack/Brew/dot.bashrc'
     varname: BREWROOT
   CTN:
-    directory: '/home/chet/Hack/CTN'
-    rc: '/home/chet/Hack/CTN/dot.bashrc'
+    directory: '$HOME/Hack/CTN'
+    rc: '$HOME/Hack/CTN/dot.bashrc'
     varname: CTNROOT
   ethereum:
-    directory: '/home/chet/Hack/Ethereum'
-    chdir: '/home/chet/Hack/Ethereum/src'
-    rc: '/home/chet/Hack/Ethereum/dot.bashrc'
+    directory: '$HOME/Hack/Ethereum'
+    chdir: '$HOME/Hack/Ethereum/src'
+    rc: '$HOME/Hack/Ethereum/dot.bashrc'
     varname: ETHEREUMROOT
   jaxo:
-    directory: '/home/chet/Hack/Jaxo'
-    rc: '/home/chet/Hack/Jaxo/dot.bashrc'
+    directory: '$HOME/Hack/Jaxo'
+    rc: '$HOME/Hack/Jaxo/dot.bashrc'
     varname: JAXOROOT
   Bitcoin:
-    directory: '/home/chet/Hack/Bitcoin'
-    rc: '/home/chet/Hack/Bitcoin/dot.bashrc'
+    directory: '$HOME/Hack/Bitcoin'
+    rc: '$HOME/Hack/Bitcoin/dot.bashrc'
     varname: BITCOINROOT
   fzf:
-    directory: '/home/chet/Hack/FZF'
-    rc: '/home/chet/Hack/FZF/dot.bashrc'
+    directory: '$HOME/Hack/FZF'
+    rc: '$HOME/Hack/FZF/dot.bashrc'
     varname: FZFROOT
   QASM:
-    directory: '/home/chet/Hack/QASM'
+    directory: '$HOME/Hack/QASM'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/QASM/QiskitDevenv/bin/activate'
@@ -338,7 +338,7 @@ sandboxes:
     varname: SPHINXROOT
     description: "Sphinx hacking"
   ismlgo:
-    directory: '/home/chet/Hack/ismlgo'
+    directory: '$HOME/Hack/ismlgo'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/ismlgo/dot.bashrc'
