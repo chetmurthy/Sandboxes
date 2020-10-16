@@ -49,7 +49,8 @@ if ($usage) {
 
 our $rcfile ;
 {
-  my $txt = "unset BASH_ENV\n" ;
+  my $txt = "";
+  $txt .= "unset BASH_ENV\n" ;
   $txt .= <<"EOF";
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 EOF
@@ -69,12 +70,11 @@ EOF
 END {
   unlink($rcfile) if $rcfile ;
 }
-
 our $prog = shift @ARGV;
 
 our $args = @ARGV ? (" '".join("' '",@ARGV)."'") : "";
 our $cmd = "$prog$args";
-$cmd = "bash -c \"$cmd\"" if ($prog ne 'bash') ;
+$cmd = "bash --rcfile $rcfile -c \"$cmd\"" if ($prog ne 'bash') ;
 print STDERR $cmd."\n" if $main::verbose ;
 v_system($cmd);
 
