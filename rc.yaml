@@ -64,6 +64,30 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
     varname: CAMLROOT
     description: "Ocaml GENERIC installation"
+  Opam-2.1.0:
+    directory: '$HOME/Hack/Opam-2.1.0/GENERIC'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Opam-2.1.0/GENERIC/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Opam 2.1.0 installation"
+  Opam-2.1.0-beta4:
+    directory: '$HOME/Hack/Opam-2.1.0-beta4/GENERIC'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Opam-2.1.0-beta4/GENERIC/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Opam 2.1.0-beta4 installation"
+  Opam:
+    directory: '$HOME/Hack/Opam-2.1.2/GENERIC'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Opam-2.1.2/GENERIC/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Opam 2.1.2 installation"
   CamlGEN2:
     directory: '/home/chet/Hack/Ocaml/GEN2'
     rc:
@@ -344,3 +368,9 @@ sandboxes:
      -  '$HOME/Hack/ismlgo/dot.bashrc'
     varname: ISMLGOROOT
     description: "ocaml-golang hacking"
+  Eli:
+    directory: '$HOME/Hack/Eli'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Eli/dot.bashrc'
+    varname: ELIROOT
