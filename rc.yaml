@@ -347,13 +347,19 @@ sandboxes:
     directory: '$HOME/Hack/FZF'
     rc: '$HOME/Hack/FZF/dot.bashrc'
     varname: FZFROOT
-  QASM:
-    directory: '$HOME/Hack/QASM'
+  Conda:
+    directory: '$HOME/Hack/anaconda3'
+    rc:
+     -  '$HOME/.sandbox/bashrc/anaconda3.bashrc'
+    varname: CONDAROOT
+    description: "Anaconda3 Distribution"
+  IBMQ:
+    directory: '$HOME/Hack/IBMQ'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/QASM/QiskitDevenv/bin/activate'
+     -  '$HOME/Hack/IBMQ/QiskitDevenv/bin/activate'
     varname: QASMROOT
-    description: "QASM hacking"
+    description: "IBM-QC hacking"
   Sphinx:
     directory: '/home/chet/Hack/Sphinx'
     rc:

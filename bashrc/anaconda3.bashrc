@@ -1,0 +1,1 @@
+export PATH=$CONDAROOT/bin:$PATH
