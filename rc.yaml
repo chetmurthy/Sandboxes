@@ -348,9 +348,10 @@ sandboxes:
     rc: '$HOME/Hack/FZF/dot.bashrc'
     varname: FZFROOT
   Conda:
-    directory: '$HOME/Hack/anaconda3'
+    directory: '$HOME/Hack/Anaconda3'
     rc:
      -  '$HOME/.sandbox/bashrc/anaconda3.bashrc'
+     -  '$HOME/Hack/Anaconda3/dot.bashrc'
     varname: CONDAROOT
     description: "Anaconda3 Distribution"
   IBMQ:

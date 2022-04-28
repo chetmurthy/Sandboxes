@@ -1,1 +1,1 @@
-export PATH=$CONDAROOT/bin:$PATH
+export PATH=$CONDAROOT/distribution/bin:$PATH
