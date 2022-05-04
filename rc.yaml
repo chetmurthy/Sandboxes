@@ -48,6 +48,10 @@ composite:
   Caml:
     - fzf
     - Caml4.07.1
+  IBMQ:
+    - fzf
+    - Conda
+    - IBM-Quantum
 sandboxes:
   Base:
     directory: '$HOME/Hack'
@@ -358,12 +362,11 @@ sandboxes:
      -  '$HOME/Hack/Anaconda3/dot.bashrc'
     varname: CONDAROOT
     description: "Anaconda3 Distribution"
-  IBMQ:
+  IBM-Quantum:
     directory: '$HOME/Hack/IBMQ'
     rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/IBMQ/QiskitDevenv/bin/activate'
-    varname: QASMROOT
+     -  '$HOME/Hack/IBMQ/dot.bashrc'
+    varname: IBMQROOT
     description: "IBM-QC hacking"
   Sphinx:
     directory: '/home/chet/Hack/Sphinx'
