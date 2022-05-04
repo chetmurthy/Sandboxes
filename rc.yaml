@@ -52,6 +52,10 @@ composite:
     - fzf
     - Conda
     - IBM-Quantum
+  Jupyter:
+    - fzf
+    - Conda
+    - Jupyter-Hacking
 sandboxes:
   Base:
     directory: '$HOME/Hack'
@@ -367,7 +371,15 @@ sandboxes:
     rc:
      -  '$HOME/Hack/IBMQ/dot.bashrc'
     varname: IBMQROOT
+    chdir: '$IBMQROOT'
     description: "IBM-QC hacking"
+  Jupyter-Hacking:
+    directory: '$HOME/Hack/Jupyter'
+    rc:
+     -  '$HOME/Hack/Jupyter/dot.bashrc'
+    varname: JUPYTERROOT
+    chdir: '$JUPYTERROOT'
+    description: "Jupyter hacking"
   Sphinx:
     directory: '/home/chet/Hack/Sphinx'
     rc:
