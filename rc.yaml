@@ -53,6 +53,11 @@ composite:
     - Conda
     - nodejs-16.15.0
     - IBM-Quantum
+  IBMQ-nocd:
+    - fzf
+    - Conda
+    - nodejs-16.15.0
+    - IBM-Quantum-nocd
   Jupyter:
     - fzf
     - Conda
@@ -373,6 +378,12 @@ sandboxes:
      -  '$HOME/Hack/IBMQ/dot.bashrc'
     varname: IBMQROOT
     chdir: '$IBMQROOT'
+    description: "IBM-QC hacking"
+  IBM-Quantum-nocd:
+    directory: '$HOME/Hack/IBMQ'
+    rc:
+     -  '$HOME/Hack/IBMQ/dot.bashrc'
+    varname: IBMQROOT
     description: "IBM-QC hacking"
   Jupyter-Hacking:
     directory: '$HOME/Hack/Jupyter'
