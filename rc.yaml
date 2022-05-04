@@ -306,6 +306,10 @@ sandboxes:
     directory: '$HOME/Hack/nodejs-10.6.0'
     rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
     varname: NODEJSROOT
+  nodejs-16.15.0:
+    directory: '$HOME/Hack/nodejs-16.15.0'
+    rc: '$HOME/.sandbox/bashrc/nodejs.bashrc'
+    varname: NODEJSROOT
   protobuf-3.4.0:
     directory: '$HOME/Hack/protobuf-3.4.0'
     rc: '$HOME/Hack/protobuf-3.4.0/dot.bashrc'
