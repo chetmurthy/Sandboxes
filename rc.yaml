@@ -51,12 +51,10 @@ composite:
   IBMQ:
     - fzf
     - Conda
-    - nodejs-16.15.0
     - IBM-Quantum
   IBMQ-nocd:
     - fzf
     - Conda
-    - nodejs-16.15.0
     - IBM-Quantum-nocd
   Jupyter:
     - fzf
@@ -103,7 +101,7 @@ sandboxes:
     varname: CAMLROOT
     description: "Opam 2.1.2 installation"
   CamlGEN2:
-    directory: '/home/chet/Hack/Ocaml/GEN2'
+    directory: '$HOME/Hack/Ocaml/GEN2'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/GEN2/dot.bashrc'
@@ -111,7 +109,7 @@ sandboxes:
     varname: CAMLROOT
     description: "Ocaml GEN2 installation"
   CamlGEN3:
-    directory: '/home/chet/Hack/Ocaml/GEN3'
+    directory: '$HOME/Hack/Ocaml/GEN3'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ocaml/GEN3/dot.bashrc'
@@ -393,7 +391,7 @@ sandboxes:
     chdir: '$JUPYTERROOT'
     description: "Jupyter hacking"
   Sphinx:
-    directory: '/home/chet/Hack/Sphinx'
+    directory: '$HOME/Hack/Sphinx'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Sphinx/bin/activate'
