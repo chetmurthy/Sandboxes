@@ -51,10 +51,12 @@ composite:
   IBMQ:
     - fzf
     - Conda
+    - nodejs-16.15.0
     - IBM-Quantum
   IBMQ-nocd:
     - fzf
     - Conda
+    - nodejs-16.15.0
     - IBM-Quantum-nocd
   Jupyter:
     - fzf
