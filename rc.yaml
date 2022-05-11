@@ -372,6 +372,13 @@ sandboxes:
      -  '$HOME/Hack/Anaconda3/dot.bashrc'
     varname: CONDAROOT
     description: "Anaconda3 Distribution"
+  Conda-2021-11:
+    directory: '$HOME/Hack/Anaconda3-2021-11'
+    rc:
+     -  '$HOME/.sandbox/bashrc/anaconda3.bashrc'
+     -  '$HOME/Hack/Anaconda3-2021-11/dot.bashrc'
+    varname: CONDAROOT
+    description: "2021-Nov Anaconda3 Distribution"
   IBM-Quantum:
     directory: '$HOME/Hack/IBMQ'
     rc:
