@@ -50,18 +50,22 @@ composite:
     - Caml4.07.1
   IBMQ:
     - fzf
-    - Conda
     - nodejs-16.15.0
+    - Rust
+    - Quantum-VENV
     - IBM-Quantum
-  IBMQ-nocd:
-    - fzf
-    - Conda
-    - nodejs-16.15.0
-    - IBM-Quantum-nocd
   Jupyter:
     - fzf
     - Conda
     - Jupyter-Hacking
+  Rusting:
+    - fzf
+    - Conda
+    - Rust-Hacking
+  Rusting-nocd:
+    - fzf
+    - Conda
+    - Rust-Hacking-nocd
 sandboxes:
   Base:
     directory: '$HOME/Hack'
@@ -384,13 +388,6 @@ sandboxes:
     rc:
      -  '$HOME/Hack/IBMQ/dot.bashrc'
     varname: IBMQROOT
-    chdir: '$IBMQROOT'
-    description: "IBM-QC hacking"
-  IBM-Quantum-nocd:
-    directory: '$HOME/Hack/IBMQ'
-    rc:
-     -  '$HOME/Hack/IBMQ/dot.bashrc'
-    varname: IBMQROOT
     description: "IBM-QC hacking"
   Jupyter-Hacking:
     directory: '$HOME/Hack/Jupyter'
@@ -398,7 +395,32 @@ sandboxes:
      -  '$HOME/Hack/Jupyter/dot.bashrc'
     varname: JUPYTERROOT
     chdir: '$JUPYTERROOT'
-    description: "Jupyter hacking"
+    description: "Jupyter Hacking"
+  Rust-Hacking:
+    directory: '$HOME/Hack/Rusting'
+    rc:
+     -  '$HOME/Hack/Rusting/dot.bashrc'
+    varname: RUSTROOT
+    chdir: '$RUSTROOT'
+    description: "Rust Hacking"
+  Rust-Hacking-nocd:
+    directory: '$HOME/Hack/Rusting'
+    rc:
+     -  '$HOME/Hack/Rusting/dot.bashrc'
+    varname: RUSTROOT
+    description: "Rust Hacking"
+  Slepc-Hacking-nocd:
+    directory: '$HOME/Hack/slepc'
+    rc:
+     -  '$HOME/Hack/slepc/dot.bashrc'
+    varname: SLEPCROOT
+    description: "Rust Hacking"
+  Rust:
+    directory: '$HOME/Hack/Rust'
+    rc:
+     -  '$HOME/Hack/Rust/dot.bashrc'
+    varname: RUSTROOT
+    description: "Rust"
   Sphinx:
     directory: '$HOME/Hack/Sphinx'
     rc:
@@ -406,6 +428,20 @@ sandboxes:
      -  '$HOME/Hack/Sphinx/bin/activate'
     varname: SPHINXROOT
     description: "Sphinx hacking"
+  Python-VENV-Debug:
+    directory: '$HOME/Hack/Python-VENV/Debug'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Python-VENV/Debug/bin/activate'
+    varname: PYTHONDEBUGROOT
+    description: "Python hacking"
+  Quantum-VENV:
+    directory: '$HOME/Hack/Quantum-VENV'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Quantum-VENV/Quantum/bin/activate'
+    varname: QUANTUMVENVROOT
+    description: "Quantum Python VENV"
   ismlgo:
     directory: '$HOME/Hack/ismlgo'
     rc:
