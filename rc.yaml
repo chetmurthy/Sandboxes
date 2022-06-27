@@ -435,6 +435,13 @@ sandboxes:
      -  '$HOME/Hack/Python-VENV/Debug/bin/activate'
     varname: PYTHONDEBUGROOT
     description: "Python hacking"
+  Python3.10:
+    directory: '$HOME/Hack/Python3.10'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Python3.10/dot.bashrc'
+    varname: PYTHONROOT
+    description: "Python 3.10"
   Quantum-VENV:
     directory: '$HOME/Hack/Quantum-VENV'
     rc:
