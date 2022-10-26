@@ -24,15 +24,8 @@ composite:
     - protobuf-3.4.0
     - CTN
   Thrift:
-    - thrift-0.10.0
-    - golang-1.8
-    - nodejs-8.4.0
-    - Caml4.04.2
-  FBThrift:
-    - fbthrift
-    - golang-1.8
-    - nodejs-8.4.0
-    - Caml4.04.2
+    - thrift-0.17.0
+    - fzf
   Jaxo:
     - jaxo
     - golang-1.8
@@ -336,9 +329,9 @@ sandboxes:
     directory: '$HOME/Hack/protobuf-2.6.1'
     rc: '$HOME/Hack/protobuf-2.6.1/dot.bashrc'
     varname: PROTOBUFROOT
-  thrift-0.10.0:
-    directory: '$HOME/Hack/thrift-0.10.0'
-    rc: '$HOME/.sandbox/bashrc/thrift-0.10.0.bashrc'
+  thrift-0.17.0:
+    directory: '$HOME/Hack/thrift-0.17.0'
+    rc: '$HOME/Hack/thrift-0.17.0/dot.bashrc'
     varname: THRIFTROOT
   fbthrift:
     directory: '$HOME/Hack/fbthrift'
