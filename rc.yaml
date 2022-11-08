@@ -6,7 +6,6 @@ composite:
     - OCaml-Python-VENV
   IBMQ:
     - fzf
-    - nodejs-16.15.0
     - Rust
     - Quantum-VENV
     - IBM-Quantum
