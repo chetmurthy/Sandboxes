@@ -37,6 +37,14 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
     varname: CAMLROOT
     description: "Opam 2.1.2 installation"
+  Opam-2.1.6:
+    directory: '$HOME/Hack/Opam-2.1.6/GENERIC'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Opam-2.1.6/GENERIC/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Opam 2.1.2 installation"
   fzf:
     directory: '$HOME/Hack/FZF'
     rc: '$HOME/Hack/FZF/dot.bashrc'
