@@ -115,3 +115,15 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Bazel/dot.bashrc'
     varname: BAZELROOT
+  Ruby:
+    directory: '$HOME/Hack/Ruby'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ruby/dot.bashrc'
+    varname: RUBYROOT
+  Texlive:
+    directory: '$HOME/Hack/Texlive'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Texlive/dot.bashrc'
+    varname: TEXLIVEROOT
