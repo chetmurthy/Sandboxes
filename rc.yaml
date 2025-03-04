@@ -21,6 +21,17 @@ composite:
     - fzf
     - Conda
     - Rust-Hacking-nocd
+  Minireference:
+    - fzf
+    - Texlive
+    - Python-3.7-Fabric-VENV
+    - PhantomJS
+    - Ruby-2.6.3
+  Softcover:
+    - fzf
+    - Texlive
+    - PhantomJS
+    - Ruby-3.4.2
 sandboxes:
   Base:
     directory: '$HOME/Hack'
@@ -115,15 +126,71 @@ sandboxes:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Bazel/dot.bashrc'
     varname: BAZELROOT
+  Python-Fabric-VENV:
+    directory: '$HOME/Hack/Python-Fabric-VENV/Python'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Python-Fabric-VENV/Python/bin/activate'
+    varname: PYTHONROOT
+    description: "Python Fabric hacking"
   Ruby:
     directory: '$HOME/Hack/Ruby'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Ruby/dot.bashrc'
     varname: RUBYROOT
+  Ruby-2.6.3:
+    directory: '$HOME/Hack/Ruby-2.6.3'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ruby-2.6.3/dot.bashrc'
+    varname: RUBYROOT
+  Ruby-2.7.8:
+    directory: '$HOME/Hack/Ruby-2.7.8'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ruby-2.7.8/dot.bashrc'
+    varname: RUBYROOT
+  Ruby-3.2.7:
+    directory: '$HOME/Hack/Ruby-3.2.7'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ruby-3.2.7/dot.bashrc'
+    varname: RUBYROOT
+  Ruby-3.3.7:
+    directory: '$HOME/Hack/Ruby-3.3.7'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ruby-3.3.7/dot.bashrc'
+    varname: RUBYROOT
+  Ruby-3.4.2:
+    directory: '$HOME/Hack/Ruby-3.4.2'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Ruby-3.4.2/dot.bashrc'
+    varname: RUBYROOT
+  PhantomJS:
+    directory: '$HOME/Hack/PhantomJS'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/PhantomJS/dot.bashrc'
+    varname: PHANTOMJSROOT
   Texlive:
     directory: '$HOME/Hack/Texlive'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Texlive/dot.bashrc'
     varname: TEXLIVEROOT
+  Python-3.7:
+    directory: '$HOME/Hack/Python-3.7'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Python-3.7/dot.bashrc'
+    varname: PYTHONROOT
+  Python-3.7-Fabric-VENV:
+    directory: '$HOME/Hack/Python-3.7-Fabric-VENV/Python'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Python-3.7-Fabric-VENV/Python/bin/activate'
+    varname: PYTHONROOT
+    description: "Python 3.7 Fabric hacking"
