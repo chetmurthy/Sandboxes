@@ -176,7 +176,7 @@ sandboxes:
      -  '$HOME/Hack/PhantomJS/dot.bashrc'
     varname: PHANTOMJSROOT
   Texlive:
-    directory: '$HOME/Hack/Texlive'
+    directory: '$HOME/Hack/Texlive/install-tl-20250312/'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Texlive/dot.bashrc'
