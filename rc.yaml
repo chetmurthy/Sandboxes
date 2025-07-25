@@ -41,6 +41,14 @@ sandboxes:
     varname: BASEROOT
     description: "Base sandbox (stuff like HTTP proxy)"
   Opam:
+    directory: '$HOME/Hack/Opam/GENERIC'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Opam/GENERIC/dot.bashrc'
+     -  '$HOME/.sandbox/bashrc/ocaml-base.bashrc'
+    varname: CAMLROOT
+    description: "Opam installation"
+  Opam-2.3.0:
     directory: '$HOME/Hack/Opam-2.3.0/GENERIC'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
