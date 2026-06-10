@@ -202,3 +202,9 @@ sandboxes:
      -  '$HOME/Hack/Python-3.7-Fabric-VENV/Python/bin/activate'
     varname: PYTHONROOT
     description: "Python 3.7 Fabric hacking"
+  Antlr:
+    directory: '$HOME/Hack/Antlr'
+    rc:
+     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
+     -  '$HOME/Hack/Antlr/dot.bashrc'
+    varname: ANTLRROOT
