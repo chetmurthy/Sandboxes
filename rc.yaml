@@ -3,16 +3,6 @@ composite:
   OCaml:
     - fzf
     - Opam
-    - OCaml-Python-VENV
-  IBMQ:
-    - fzf
-    - Rust
-    - Quantum-VENV
-    - IBM-Quantum
-  Jupyter:
-    - fzf
-    - Conda
-    - Jupyter-Hacking
   Rusting:
     - fzf
     - Conda
@@ -21,17 +11,6 @@ composite:
     - fzf
     - Conda
     - Rust-Hacking-nocd
-  Minireference:
-    - fzf
-    - Texlive
-    - Python-3.7-Fabric-VENV
-    - PhantomJS
-    - Ruby-2.6.3
-  Softcover:
-    - fzf
-    - Texlive
-    - PhantomJS
-    - Ruby-3.4.2
 sandboxes:
   Base:
     directory: '$HOME/Hack'
@@ -68,19 +47,6 @@ sandboxes:
     directory: '$HOME/Hack/FZF'
     rc: '$HOME/Hack/FZF/dot.bashrc'
     varname: FZFROOT
-  IBM-Quantum:
-    directory: '$HOME/Hack/IBMQ'
-    rc:
-     -  '$HOME/Hack/IBMQ/dot.bashrc'
-    varname: IBMQROOT
-    description: "IBM-QC hacking"
-  Jupyter-Hacking:
-    directory: '$HOME/Hack/Jupyter'
-    rc:
-     -  '$HOME/Hack/Jupyter/dot.bashrc'
-    varname: JUPYTERROOT
-    chdir: '$JUPYTERROOT'
-    description: "Jupyter Hacking"
   Rust-Hacking:
     directory: '$HOME/Hack/Rusting'
     rc:
@@ -107,88 +73,18 @@ sandboxes:
      -  '$HOME/Hack/Sphinx/bin/activate'
     varname: SPHINXROOT
     description: "Sphinx hacking"
-  OCaml-Python-VENV:
-    directory: '$HOME/Hack/OCaml-Python-VENV/Python'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/OCaml-Python-VENV/Python/bin/activate'
-    varname: PYTHONDEBUGROOT
-    description: "OCaml + Python hacking"
-  Quantum-VENV:
-    directory: '$HOME/Hack/Quantum-VENV'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Quantum-VENV/Quantum/bin/activate'
-    varname: QUANTUMVENVROOT
-    description: "Quantum Python VENV"
-  ismlgo:
-    directory: '$HOME/Hack/ismlgo'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/ismlgo/dot.bashrc'
-    varname: ISMLGOROOT
-    description: "ocaml-golang hacking"
   Bazel:
     directory: '$HOME/Hack/Bazel'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/Bazel/dot.bashrc'
     varname: BAZELROOT
-  Python-Fabric-VENV:
-    directory: '$HOME/Hack/Python-Fabric-VENV/Python'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Python-Fabric-VENV/Python/bin/activate'
-    varname: PYTHONROOT
-    description: "Python Fabric hacking"
-  Ruby:
-    directory: '$HOME/Hack/Ruby'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Ruby/dot.bashrc'
-    varname: RUBYROOT
-  Ruby-2.6.3:
-    directory: '$HOME/Hack/Ruby-2.6.3'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Ruby-2.6.3/dot.bashrc'
-    varname: RUBYROOT
-  Ruby-2.7.8:
-    directory: '$HOME/Hack/Ruby-2.7.8'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Ruby-2.7.8/dot.bashrc'
-    varname: RUBYROOT
-  Ruby-3.2.7:
-    directory: '$HOME/Hack/Ruby-3.2.7'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Ruby-3.2.7/dot.bashrc'
-    varname: RUBYROOT
-  Ruby-3.3.7:
-    directory: '$HOME/Hack/Ruby-3.3.7'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Ruby-3.3.7/dot.bashrc'
-    varname: RUBYROOT
-  Ruby-3.4.2:
-    directory: '$HOME/Hack/Ruby-3.4.2'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Ruby-3.4.2/dot.bashrc'
-    varname: RUBYROOT
   PhantomJS:
     directory: '$HOME/Hack/PhantomJS'
     rc:
      -  '$HOME/.sandbox/bashrc/aliases.bashrc'
      -  '$HOME/Hack/PhantomJS/dot.bashrc'
     varname: PHANTOMJSROOT
-  Texlive:
-    directory: '$HOME/Hack/Texlive/install-tl-20250312/'
-    rc:
-     -  '$HOME/.sandbox/bashrc/aliases.bashrc'
-     -  '$HOME/Hack/Texlive/dot.bashrc'
-    varname: TEXLIVEROOT
   Python-3.7:
     directory: '$HOME/Hack/Python-3.7'
     rc:
